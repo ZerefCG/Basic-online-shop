@@ -1,0 +1,336 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+
+
+body{
+    font-family: sans-serif;
+}
+
+
+/* STYLE GENERAL */
+
+header{
+    width: 100%;
+    
+}
+
+
+
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* STYLES HEADER */
+
+
+header .container{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* HERO STYLES IMAGE AND INPUT */
+
+main .hero{
+    min-height: 25rem;
+    background-image: url(img/hero.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+}
+
+/* HERO ESTILOS INPUT Y TEXTO */
+
+main .hero .container{
+    color: white;
+    align-self: center;
+   
+}
+
+main .hero .container h2{
+    font-weight:300;
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    text-align: left;
+}
+
+main .hero .container p{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+
+/* STYLE INPUT */
+
+form{
+    position: relative;
+    width: 28rem;
+    
+}
+
+
+main .hero .container form input[type="text"]
+{
+    width: 100%;
+    padding: 0.8rem;
+    outline: none;
+}
+
+main .hero .container form input[type="submit"]
+{
+    text-indent: -9999px;
+    background-image: url(img/lupa.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    position: absolute;
+    right: 0.1rem;
+    top: 0.5rem;
+}
+
+
+/* BARRA AFTER HERO IMAGE */
+
+
+main .barra{
+    background-image:linear-gradient(to right, #741d51 0%, #e44e52 100%);
+    color: white;
+    text-align:center;
+    padding: 1.5rem;
+    
+}
+
+main .barra .container{
+    display: flex;
+    justify-content: center;
+
+}
+
+/* ADAPTANDO IMAGENES EN TAMAÑO DE BARRA CON FLEXBOX */
+
+
+main .barra .container .iconos{
+    display: flex;
+    width: calc(100% / 3);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main .barra .container .iconos .box-icon
+{
+    width: 2.5rem;
+
+}
+
+main .barra .container .iconos .box-icon img{
+    width: 100%;
+}
+
+
+
+/*---AREA DE f EN LINEA CENTRAREMOS CON CONTAINER---*/
+
+main .cursos{
+    width: 90%;
+    margin:  0 auto;
+   
+}
+
+
+main .cursos h1{
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+    
+}
+
+main .cursos .container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+/* PRODUCTOS DE CURSOS EN LINEA */
+
+main .cursos .container .products{
+    flex-basis: calc(100%/ 4 - 1rem);
+    margin-left: 1rem;
+    border: 1px solid #e1e1e1;
+    margin-bottom: 1rem;
+    
+}
+
+main .cursos .container .products h4{
+    font-size: 1.1rem;
+    font-weight:800;
+}
+
+main .cursos .container .products p{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+main .cursos .container .products .info-curso{
+    padding: 1rem;
+   
+}
+
+
+/* IMAGENES CURSOS */
+
+main .cursos .container .products .img-cursos{
+    width: 100%;
+   
+}
+
+/* SECCION DE PRECIOS */
+
+main .cursos .container .products .box-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+main .cursos .container .products .box-price p{
+    font-size: 1.8rem;
+    color: rgb(94, 245, 94);
+}
+
+main .cursos .container .products .box-price .descuento{
+    font-size: 1.4rem;
+    color: red;
+    text-decoration:line-through;
+    
+}
+
+/* BOTON DE CARDS DE CURSOS */
+
+main .cursos .container .products .button {
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    display: block;
+    background-color: #2287a6;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+main .cursos .container .products .button:hover{
+    background-color: #289ec2;
+    transition: 0.2s all;
+}
+
+
+/* MEDIA QUERIES */
+
+
+@media screen and (max-width:1024px)
+{
+    main .barra .container{
+        flex-direction: column;
+        width: 50%;
+       
+        
+        
+        
+       
+
+    }
+
+    main .barra{
+        text-align: left;
+        
+    }
+
+    main .barra .container .iconos{
+        justify-content:left;
+        margin-bottom: 1rem;
+        width: 100%;
+       
+        
+        
+        
+    }
+
+    main .barra .container .iconos .box-icon{
+        margin-right: 1rem;
+        flex-shrink: 0.01;
+        
+    }
+}
+
+
+/* MEDIA QUERIES 892px */
+
+@media screen and (max-width:892px)
+{
+    main .cursos .container .products{
+        flex-basis: calc(100%/ 3 - 1rem);
+       
+        
+    }
+}
+
+/* MEDIAQUERIES 660px  */
+
+@media screen and (max-width:660px)
+{
+    main .cursos .container .products{
+        flex-basis: calc(100%/ 2 - 1rem);
+       
+        
+    }
+}
+
+
+/* MEDIAQUERIES 490 INPUT */
+
+@media screen and (max-width:500px){
+
+    main .hero .container p{
+       text-align: center;
+    }
+
+    main .hero .container h2{
+        text-align: center;
+    }
+
+    form{
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+/* MEDIAQUERIES 455px  */
+
+@media screen and (max-width:455px) 
+
+{
+    main .cursos .container .products{
+        flex-basis: 100%;
+       
+       
+        
+    }
+
+    
+}
+
